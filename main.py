@@ -14,9 +14,9 @@ class CircleApp(QMainWindow, Ui_MainWindow):
         self.scene = QGraphicsScene(self)
         self.view = QGraphicsView(self.scene)
         self.verticalLayout.addWidget(self.view)
-        self.btnCreateCircle.clicked.connect(self.createCircle)
+        self.btnCreateCircle.clicked.connect(self.create_circle)
 
-    def createCircle(self):
+    def create_circle(self):
         diameter = random.randint(20, 100)
         x = random.randint(0, self.view.width() - diameter)
         y = random.randint(0, self.view.height() - diameter)
